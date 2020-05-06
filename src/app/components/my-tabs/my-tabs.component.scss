@@ -1,0 +1,59 @@
+.tabs {
+    /* 兼容不支持 env( ) 的设备  */
+    padding-bottom: constant(safe-area-inset-bottom);
+    /* 在 iphone x + 中本句才会生效 */
+    padding-bottom: env(safe-area-inset-bottom);
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    background: #FAFAFA;
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        color: #8E8E8E;
+
+        .label {
+            font-size: 10px;
+            line-height: 20px;
+        }
+
+        .icon {
+            width: 100%;
+            background: url(../../../assets/imgs/wallet.svg) center center no-repeat;
+            background-size: 24px auto;
+            height: 30px;
+            margin: 0 auto;
+
+            &.icon-wallet {
+                background-image: url(../../../assets/imgs/wallet.svg);
+            }
+
+            &.icon-pledge {
+                background-image: url(../../../assets/imgs/pledge.svg);
+            }
+
+            &.icon-settings {
+                background-image: url(../../../assets/imgs/setting.svg);
+            }
+        }
+
+        &.active {
+            color: var(--main-color);
+
+            .icon {
+                &.icon-wallet {
+                    background-image: url(../../../assets/imgs/wallet-active.svg);
+                }
+
+                &.icon-pledge {
+                    background-image: url(../../../assets/imgs/pledge-active.svg);
+                }
+
+                &.icon-settings {
+                    background-image: url(../../../assets/imgs/setting-active.svg);
+                }
+            }
+        }
+    }
+}

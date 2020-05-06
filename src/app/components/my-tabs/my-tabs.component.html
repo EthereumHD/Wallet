@@ -1,0 +1,12 @@
+<div class="tabs">
+    <div class="tab" [ngClass]="tab == 'wallet' ? 'active' : ''" tappable (click)="toggleTab('wallet')">
+        <div class="icon icon-wallet">
+        </div>
+        <div class="label">{{ 'WALLET' | translate }}</div>
+    </div>
+
+    <div class="tab" [ngClass]="tab == 'setting' ? 'active' : ''" tappable (click)="toggleTab('setting')">
+        <div class="icon icon-settings"></div>
+        <div class="label">{{ 'MINE' | translate }}</div>
+    </div>
+</div>

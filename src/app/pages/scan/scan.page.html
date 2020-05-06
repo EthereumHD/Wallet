@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'SCAN' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="{'qrscanner':isShow}">
+    <div class="area"></div>
+    <div class="line"></div>
+</ion-content>
+
+<ion-footer *ngIf="showIcon">
+    <div class="warp-icon" tappable (click)="close()">
+        <img src="./assets/imgs/qrscanner/close.svg" alt="">
+        <span translate="">CANCEL</span>
+    </div>
+    <div class="warp-icon" tappable (click)="toggleLight()">
+        <img src="./assets/imgs/qrscanner/flashlight.svg" alt="">
+        <span translate="">TORCH</span>
+    </div>
+</ion-footer>
+
+<app-alert [title]="alertTitle" [desc]="alertDesc" *ngIf="ifShowAlert" cancelText="{{ 'CANCEL' | translate }}"
+    (cancel)="cancelAlert()" confirmText="{{ 'CONFIRM' | translate }}" (confirm)="confirmAlert()">
+</app-alert>

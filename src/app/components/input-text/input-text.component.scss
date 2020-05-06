@@ -1,0 +1,26 @@
+.input-text-wrapper {
+    margin-bottom: 5px;
+
+    .label {
+        font-size: 14px;
+        color: #000000;
+        line-height: 44px;
+    }
+
+    input {
+        background: #F8F8F8;
+        border: 1px solid #E8E8E8;
+        border-radius: 5px;
+        height: 48px;
+        line-height: normal;
+        font-size: 14px;
+        padding: 0 14px;
+        display: block;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #999;
+        }
+    }
+}

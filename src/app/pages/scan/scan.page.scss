@@ -1,0 +1,87 @@
+ion-app.cameraView,
+ion-app.cameraView .nav-decor {
+    background: transparent none !important;
+
+    .tabbar.show-tabbar {
+        opacity: 0;
+    }
+}
+
+ion-app.cameraView ion-content {
+    --background: transparent none !important;
+}
+
+
+// page-scan {
+.qrscanner {
+    background: none;
+
+    .area {
+        margin-top: 30px;
+        width: 100%;
+        height: 90%;
+        background: url(../../../assets/imgs/qrscanner/scanner.svg) no-repeat center center;
+        background-size: contain;
+    }
+
+    .line {
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        background: red;
+        position: absolute;
+        animation: myfirst 2s linear infinite alternate;
+    }
+
+    @keyframes myfirst {
+        0% {
+            background: red;
+            top: 34%;
+        }
+
+        25% {
+            background: yellow;
+            top: 40%;
+        }
+
+        50% {
+            background: blue;
+            top: 46%;
+        }
+
+        75% {
+            background: green;
+            top: 52%;
+        }
+
+        100% {
+            background: red;
+            top: 60%;
+        }
+    }
+}
+
+ion-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 22px;
+
+    .warp-icon {
+        width: 54px;
+        height: 54px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            position: absolute;
+            margin-top: 38px;
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+}
+
+// }

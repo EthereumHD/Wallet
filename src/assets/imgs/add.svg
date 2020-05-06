@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>添加钱包icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ehd钱包" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-选择钱包样式" transform="translate(-318.000000, -524.000000)">
+            <g id="选择钱包-弹出提示" transform="translate(18.000000, 498.000000)">
+                <g id="添加钱包icon" transform="translate(298.000000, 24.000000)">
+                    <g>
+                        <rect id="矩形" x="0" y="0" width="22" height="22"></rect>
+                        <path d="M10,10 L10,3 C10,2.44771525 10.4477153,2 11,2 C11.5522847,2 12,2.44771525 12,3 L12,10 L19,10 C19.5522847,10 20,10.4477153 20,11 C20,11.5522847 19.5522847,12 19,12 L12,12 L12,19 C12,19.5522847 11.5522847,20 11,20 C10.4477153,20 10,19.5522847 10,19 L10,12 L3,12 C2.44771525,12 2,11.5522847 2,11 C2,10.4477153 2.44771525,10 3,10 L10,10 Z" id="添加钱包" fill="#000000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

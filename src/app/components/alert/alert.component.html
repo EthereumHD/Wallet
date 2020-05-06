@@ -1,0 +1,10 @@
+<div class="mask">
+    <div class="content">
+        <div class="title">{{ title }}</div>
+        <div class="desc">{{ desc }}</div>
+        <div class="btns">
+            <div class="btn btn-close" tappable (click)="cancelAlert()" *ngIf="cancelText">{{ cancelText }}</div>
+            <div class="btn btn-confirm" (click)="confirmAlert()" *ngIf="confirmText">{{ confirmText }}</div>
+        </div>
+    </div>
+</div>

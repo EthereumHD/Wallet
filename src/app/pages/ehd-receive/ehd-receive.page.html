@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/wallet"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'RECEIVE' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <!-- <div class="logo"></div> -->
+        <!-- <div class="qrcode" [innerHTML]="qrcode">
+
+        </div> -->
+
+        <ngx-qrcode [qrc-value]="qrcode" qrc-version="9"></ngx-qrcode>
+
+        <div class="address" (click)="copyAddr()">
+            <div class="label">{{ addr }}</div>
+            <div class="btn" tappable></div>
+        </div>
+        <div class="tips">
+            {{ 'RECEIVE_ADDR' | translate:{value: global.projectName} }}
+        </div>
+    </div>
+    <div class="bottom-logo"></div>
+</ion-content>

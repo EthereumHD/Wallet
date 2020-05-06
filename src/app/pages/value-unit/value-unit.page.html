@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/setting"></ion-back-button>
+            </ion-buttons>
+        </ion-buttons>
+        <ion-title>{{ 'PRICE_UNIT' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="gray-content">
+    <div class="my-content">
+        <div class="item-list">
+            <div class="item" *ngFor="let rate of rateList" (click)="toggleValueUnit(rate.currency)">
+                <div class="label">{{ rate.currency }}({{ rate.symbol }})</div>
+                <div class="content"></div>
+                <div class="selector" *ngIf="global.settings.valueUnit == rate.currency"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>

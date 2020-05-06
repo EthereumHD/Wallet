@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'BACKUP_MNEMONIC' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <div class="tips" translate="">CLICK_MNEMONIC</div>
+        <div class="textarea clear">
+            <div class="word" *ngFor="let mnemonic of backupList">{{ mnemonic }}</div>
+        </div>
+
+        <div class="mnemonic-grid clear">
+            <div class="grid" tappable (click)="selectMnemonic(mnemonic)"
+                [ngClass]="backupList.indexOf(mnemonic) > -1 ? 'active' : ''" *ngFor="let mnemonic of mnemonicList">
+                {{mnemonic}}</div>
+        </div>
+    </div>
+
+    <div class="confirm-button bottom-button" tappable (click)="verifyNmemonic()"
+        [ngClass]="backupList.length == mnemonicList.length ? '' : 'disabled'" translate>VERIFY
+    </div>
+
+</ion-content>

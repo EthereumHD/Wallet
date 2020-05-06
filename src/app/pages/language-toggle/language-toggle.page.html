@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/setting"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'DISPLAY_LANGUAGE' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="gray-content">
+    <div class="my-content">
+        <div class="item-list">
+            <div class="item" tappable (click)="setLanguage('cn')">
+                <div class="label">简体中文</div>
+                <div class="content"></div>
+                <div class="selector" *ngIf="global.settings.language == 'cn'"></div>
+            </div>
+            <div class="item" tappable (click)="setLanguage('en')">
+                <div class="label">English</div>
+                <div class="content"></div>
+                <div class="selector" *ngIf="global.settings.language == 'en'"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,80 @@
+<ion-content>
+    <div class="wrapper">
+        <div class="header">
+            <div class="title">
+                <div class="menu" tappable (click)="showWalletList()"></div>
+                <h2 class="text">{{ wallet.name }}</h2>
+                <div class="scan" tappable (click)="scan()"></div>
+            </div>
+
+            <div class="info">
+                <p class="desc" translate>WALLET_ASSET</p>
+                <div class="amount">
+                    <div class="unit">{{ global.selectedRate.symbol }}</div>
+                    <div class="interger">{{ amountInOtherInterger }}</div>
+                    <div class="fraction">.{{ amountInOtherFraction }}</div>
+                </div>
+                <div class="wallet" (click)="copyAddr()">
+                    <p class="text">{{ wallet.addr | addEhdEllipsis }}</p>
+                    <div class="copy" tappable></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btns">
+            <div class="money transfer" (click)="goEhdSend()" tappable>
+                <div class="icon"></div>
+                <p class="text" translate>SEND</p>
+            </div>
+            <div class="money receive" (click)="goEhdReceive()" tappable>
+                <div class="icon"></div>
+                <p class="text" translate>RECEIVE</p>
+            </div>
+        </div>
+
+        <div class="wallet-content" tappable (click)="goWalletDetail()">
+            <div class="wallet">
+                <div class="icon"></div>
+                <div class="name">EHD</div>
+                <div class="amount">
+                    <p class="value">{{ amount | coinDisplay }}</p>
+                    <p class="money-amount">≈{{ amountInOtherDisplay }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<app-my-tabs tab="wallet"></app-my-tabs>
+
+<div class="select-wallet" tappable *ngIf="ifShowWalletList">
+    <div class="bg" tappable (click)="closeWalletDialog()"></div>
+    <div class="wallet-wrapper">
+        <div class="title">
+            <div class="label" translate>SELECT_WALLET</div>
+            <!--当钱包数量大于全局设定值，则取消显示 "+" -->
+            <!--<div class="add" tappable (click)="addWallet()" *ngIf="global.gWalletList.length < global.maxWalletNum">-->
+            <!--</div>-->
+            <div class="add" tappable (click)="addWallet()"></div>
+        </div>
+        <div class="wallet-container">
+            <div class="wallet-list" *ngFor="let wallet of global.gWalletList; let i = index">
+                <div class="wallet" tappable (click)="toggleWallet(i, wallet)"
+                     [ngClass]="this.wallet.walletAddr == wallet.walletAddr ? 'selected' : ''">
+                    <div class="wallet-name">{{ wallet.name }}</div>
+                    <div class="address">{{ wallet.addr | addEhdEllipsis }}</div>
+                </div>
+                <div class="wallet-btn" tappable (click)="deleteWallet(i)">×</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-alert [title]="alertTitle" [desc]="alertDesc" *ngIf="ifShowAlert" cancelText="{{ 'CANCEL' | translate }}"
+           (cancel)="cancelAlert()" confirmText="{{ 'CONFIRM' | translate }}" (confirm)="confirmAlert()">
+</app-alert>
+
+<app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
+                         cancelText="{{ 'CANCEL' | translate }}" confirmText="{{ 'CONFIRM' | translate }}"
+                         (cancel)="cancelPrompt()"
+                         (confirm)="confirmPrompt($event)"></app-generate-privatekey>

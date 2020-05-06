@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>密码icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="密码icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="计价货币icon" stroke="#4A90E2" cx="11" cy="11" r="10.5"></circle>
+        <rect id="矩形" fill="#4A90E2" x="6" y="9" width="10" height="8" rx="1"></rect>
+        <rect id="矩形" fill="#FFFFFF" x="10.5" y="11.5" width="1" height="3"></rect>
+        <path d="M8.5,9.5 L13.5,9.5 L13.5,8 C13.5,6.61928813 12.3807119,5.5 11,5.5 C9.61928813,5.5 8.5,6.61928813 8.5,8 L8.5,9.5 Z" id="矩形" stroke="#4A90E2"></path>
+    </g>
+</svg>

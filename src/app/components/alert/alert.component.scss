@@ -1,0 +1,59 @@
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--mask-color);
+
+    .content {
+        position: absolute;
+        width: calc(100% - var(--page-padding)*2);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        padding: 20px;
+        background: #FFFFFF;
+        border-radius: 15px;
+    }
+
+    .title {
+        font-size: 14px;
+        color: #000000;
+        line-height: 44px;
+    }
+
+    .desc {
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+    .btns {
+        margin-top: 26px;
+        display: flex;
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            border-radius: 24px;
+            font-size: 16px;
+            height: 48px;
+            line-height: 48px;
+            margin-right: 20px;
+
+            &.btn-close {
+                background: #E5F7E5;
+                color: #00B000;
+            }
+
+            &.btn-confirm {
+                background: #00B000;
+                color: #fff;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

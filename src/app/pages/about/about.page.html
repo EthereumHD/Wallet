@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/setting"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'ABOUTUS' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="gray-content">
+    <div class="main">
+        <div class="title">
+            <div class="logo">
+                <img src="assets/imgs/icon256.png" alt="">
+                <p class="name">EHD Wallet</p>
+                <p class="version">V {{ version }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="item-list">
+        <div class="item">
+            <div class="label" translate>WEBSITE</div>
+            <div class="content" (click)="goWebsite()">{{ website }}</div>
+            <div class="next"></div>
+        </div>
+        <div class="item" (click)="update()" tappable>
+            <div class="label" translate="">VERSION_UPDATE</div>
+        </div>
+    </div>
+</ion-content>

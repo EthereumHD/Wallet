@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/wallet-create"></ion-back-button>
+        </ion-buttons>
+        <ion-title translate="">IMPORT_WALLET</ion-title>
+        <ion-buttons slot="end">
+            <ion-button tappable (click)="scan()">
+                <ion-icon size="small" slot="icon-only" src="assets/imgs/scan.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <div class="tabs">
+            <div class="tab" tappable (click)="toggleImportType('mnemonic')"
+                [ngClass]="type == 'mnemonic' ? 'focus' : ''">
+                <div class="label" translate="">MNEMONIC</div>
+            </div>
+            <div class="tab" (click)="toggleImportType('keystore')" [ngClass]="type == 'keystore' ? 'focus' : ''">
+                <div class="label">Keystore</div>
+            </div>
+        </div>
+
+        <div class="mnemonic" *ngIf="type == 'mnemonic'">
+            <div class="tips" translate="">INPUT_MNEMONIC_TIPS</div>
+            <textarea name="mnemonic" (blur)="checkMnemonic()" class="textarea" [(ngModel)]="mnemonic">
+            </textarea>
+        </div>
+
+        <div class="error-text" *ngIf="mnemonicError && type == 'mnemonic'">{{ mnemonicError }}</div>
+
+
+        <div class="mnemonic keystore" *ngIf="type == 'keystore'">
+            <div class="tips" translate="">COPY_KEYSTORE_TIPS</div>
+            <div class="input-wrapper">
+                <textarea name="keystore" (blur)="checkKeystore()" class="textarea" [(ngModel)]="keystore">
+                </textarea>
+            </div>
+        </div>
+
+        <div class="error-text" *ngIf="keystoreError && type == 'keystore'">{{ keystoreError }}</div>
+
+        <div class="input-password-wrapper">
+            <div class="label" *ngIf="type == 'mnemonic'" translate>SETUP_PASSWORD_TIPS</div>
+            <div class="label" *ngIf="type != 'mnemonic'" translate>INPUT_PASSWORD_TIPS</div>
+            <div class="input-wrapper">
+                <input name="password" (blur)="checkPassword()" [type]="ifEyeOpen ? 'text' : 'password'"
+                    [(ngModel)]="password" placeholder="{{ 'PASSWORD_RULE' | translate }}">
+            </div>
+
+            <div class="eye" tappable (click)="toggleEyeOpen()" [ngClass]="ifEyeOpen ? 'eye-open' : 'eye-close'">
+            </div>
+        </div>
+
+        <div class="error-text" *ngIf="passwordError">{{ passwordError }}</div>
+
+        <div class="input-password-wrapper" *ngIf="type == 'mnemonic'">
+            <div class="label" translate>CONFIRM_PASSWORD</div>
+            <div class="input-wrapper">
+                <input name="password1" (blur)="checkPassword1()" [type]="ifEyeOpen ? 'text' : 'password'"
+                    [(ngModel)]="password1" placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">
+            </div>
+
+            <div class=" eye" tappable (click)="toggleEyeOpen1()" [ngClass]="ifEyeOpen1 ? 'eye-open' : 'eye-close'">
+            </div>
+        </div>
+
+        <div class="error-text" *ngIf="passwordError1 && type == 'mnemonic'">{{ passwordError1 }}</div>
+
+        <div class="buttons bottom-button">
+            <div class="confirm-button" (click)="importWallet()" translate>START_IMPORT</div>
+        </div>
+    </div>
+
+
+
+</ion-content>
+
+<div class="lds-css ng-scope" *ngIf="ifShowLoading">
+    <div class="lds-wrapper">
+        <div class="lds-flickr">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <div class="progress">{{ rate }}%</div> -->
+    </div>
+</div>

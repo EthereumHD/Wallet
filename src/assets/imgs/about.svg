@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Overrides/Cell/Detail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Overrides/Cell/Detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 Z M11,21 C16.5228475,21 21,16.5228475 21,11 C21,5.4771525 16.5228475,1 11,1 C5.4771525,1 1,5.4771525 1,11 C1,16.5228475 5.4771525,21 11,21 Z M9,8.5 L12,8.5 L12,16.5 L13,16.5 L13,17 L9,17 L9,16.5 L10,16.5 L10,9 L9,9 L9,8.5 Z M10.75,7 C10.0596441,7 9.5,6.44035594 9.5,5.75 C9.5,5.05964406 10.0596441,4.5 10.75,4.5 C11.4403559,4.5 12,5.05964406 12,5.75 C12,6.44035594 11.4403559,7 10.75,7 Z" id="Detail-Disclosure" fill="#007AFF"></path>
+    </g>
+</svg>

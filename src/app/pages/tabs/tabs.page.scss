@@ -1,0 +1,35 @@
+ion-tab-bar {
+    --background: rgba(250, 250, 250, 0.90);
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.25);
+}
+
+ion-icon {
+    &[class*="custom-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    &[class*="custom-wallet"] {
+        mask-image: url(../../../assets/imgs/wallet.svg);
+    }
+
+
+    &[class*="custom-setting"] {
+        mask-image: url(../../../assets/imgs/setting.svg);
+    }
+}
+
+ion-tab-button {
+    font-size: 10px;
+    line-height: 18px;
+    --padding-top: 4px;
+    --padding-bottom: 4px;
+}

@@ -1,0 +1,53 @@
+<ion-content class="gray-content">
+    <div class="header">
+        <div class="title">{{ 'MINE' | translate }}</div>
+    </div>
+
+    <div class="item-list">
+        <div class="item" (click)="goSetValueUnitPage()">
+            <div class="icon icon-unit" tappable></div>
+            <div class="label" translate>PRICE_UNIT</div>
+            <div class="content">{{ getCurrency().currency }}({{ getCurrency().symbol }})</div>
+            <div class="next"></div>
+        </div>
+        <div class="item" tappable (click)="goSetLanguagePage()">
+            <div class="icon icon-language"></div>
+            <div class="label" translate>LANGUAGE</div>
+            <div class="content" *ngIf="global.settings.language == 'cn'">简体中文</div>
+            <div class="content" *ngIf="global.settings.language == 'en'">English</div>
+            <div class="next"></div>
+        </div>
+        <div class="item" tappable (click)="goWalletToolPage()">
+            <div class="icon icon-wallet"></div>
+            <div class="label" translate>WALLET_TOOL</div>
+            <div class="content"></div>
+            <div class="next"></div>
+        </div>
+        <div class="item" tappable (click)="goChangePassword()">
+            <div class="icon icon-password"></div>
+            <div class="label" translate>PAYMENT_PASSWORD</div>
+            <div class="content"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+
+    <div class="item-list" (click)="goBrowser()">
+        <div class="item">
+            <div class="icon icon-browser"></div>
+            <div class="label" translate>BLOCKCHAIN_BROWSER</div>
+            <div class="content"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+
+    <div class="item-list" tappable (click)="goAboutPage()">
+        <div class="item">
+            <div class="icon icon-about"></div>
+            <div class="label" translate>ABOUTUS</div>
+            <div class="content"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+</ion-content>
+
+<app-my-tabs tab="setting"></app-my-tabs>

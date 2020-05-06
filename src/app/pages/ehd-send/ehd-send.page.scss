@@ -1,0 +1,50 @@
+.main {
+    padding-top: 24px;
+
+    .label {
+        display: flex;
+
+        .desc {
+            flex: 1;
+            line-height: 44px;
+        }
+
+        .tip {
+            color: var(--tips-color);
+            font-size: 12px;
+            line-height: 44px;
+        }
+    }
+
+    .range-wrapper {
+        margin-top: 18px;
+    }
+
+    .range {
+        // padding-top: 20px;
+
+        ion-range {
+            --bar-background: var(--border-color);
+            --bar-active-background: var(--main-color);
+            --bar-height: 4px;
+            --knob-background: var(--main-color);
+            --knob-size: 24px;
+            padding: 0;
+        }
+    }
+
+    .desc {
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--tip-color);
+        overflow: hidden;
+
+        p {
+            float: left;
+        }
+
+        p:last-child {
+            float: right;
+        }
+    }
+}

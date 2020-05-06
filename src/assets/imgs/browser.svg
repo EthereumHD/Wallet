@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>浏览器icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="浏览器icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="计价货币icon" stroke="#23CC9D" cx="11" cy="11" r="10.5"></circle>
+        <path d="M11,4.66666667 L6.25,11 L11,17.3333333 L15.75,11 L11,4.66666667 Z" id="路径-2" stroke="#23CC9D" stroke-width="2" transform="translate(11.000000, 11.000000) rotate(45.000000) translate(-11.000000, -11.000000) "></path>
+        <circle id="椭圆形" fill="#2ACEA0" cx="11" cy="11" r="1"></circle>
+    </g>
+</svg>

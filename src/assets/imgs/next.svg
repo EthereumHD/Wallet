@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Disclosure Indicator</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.25">
+        <g id="我的列表-数据" transform="translate(-350.000000, -21.000000)" fill="#000000">
+            <polygon id="Disclosure-Indicator" points="350 22.5 351.5 21 358 27.5 351.5 34 350 32.5 355 27.5"></polygon>
+        </g>
+    </g>
+</svg>

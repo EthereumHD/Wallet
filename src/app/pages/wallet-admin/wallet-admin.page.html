@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/setting"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'WALLET_TOOL' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="gray-content">
+    <div class="my-content">
+        <div class="item-list">
+            <div class="item" tappable (click)="changeWalletName()">
+                <div class="label" translate>WALLET_NAME</div>
+                <div class="content">{{ wallet.name }}</div>
+                <div class="next"></div>
+            </div>
+        </div>
+
+        <div class="item-list">
+            <div class="item" tappable (click)="exportWalletKeystore()">
+                <div class="label" translate>EXPORT_KEYSTORE</div>
+            </div>
+            <div class="item" tappable (click)="exportPrivateKey()">
+                <div class="label" translate>EXPORT_PRIVATEKEY</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

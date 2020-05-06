@@ -1,0 +1,24 @@
+.title {
+    padding-top: 66px;
+    padding-bottom: 10px;
+
+    .logo {
+        text-align: center;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .name {
+        font-size: 16px;
+        color: #000000;
+        line-height: 40px;
+    }
+
+    .version {
+        font-size: 12px;
+        color: #8E8E8E;
+        line-height: 24px;
+    }
+}

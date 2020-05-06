@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div class="prompt-mask">
+        <div class="content">
+            <div class="desc">{{ promptDesc }}</div>
+
+            <div class="input-password-wrapper">
+                <input [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="paymentPassword"
+                    placeholder="{{ 'INPUT_PASSWORD_TIPS' | translate }}">
+                <div class="eye" tappable (click)="toggleEyeOpen()" [ngClass]="ifEyeOpen ? 'eye-open' : 'eye-close'">
+                </div>
+            </div>
+            <div class="error-text" *ngIf="promptError">{{ promptError }}</div>
+
+            <div class="btns">
+                <div class="btn btn-close" tappable (click)="cancelPrompt()" *ngIf="cancelText">{{ cancelText }}</div>
+                <div class="btn btn-confirm" (click)="confirmPrompt()" *ngIf="confirmText">{{ confirmText }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lds-css ng-scope" *ngIf="ifShowLoading">
+        <div class="lds-wrapper">
+            <div class="lds-flickr">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- <div class="progress">{{ rate }}%</div> -->
+        </div>
+    </div>
+</div>

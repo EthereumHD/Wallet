@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Back</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ehd钱包" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ehd" transform="translate(-18.000000, -54.000000)" fill="#FFFFFF">
+            <path d="M23,60.5563492 L23,69 C23,69.5522847 22.5522847,70 22,70 C21.4477153,70 21,69.5522847 21,69 L21,58 C21,57.4477153 21.4477153,57 22,57 L34,57 C34.5522847,57 35,57.4477153 35,58 C35,58.5522847 34.5522847,59 34,59 L24.2720779,59 L35.2279221,69.9558441 C35.6184464,70.3463684 35.6184464,70.9795334 35.2279221,71.3700577 C34.8373978,71.760582 34.2042328,71.760582 33.8137085,71.3700577 L23,60.5563492 Z" id="Back" transform="translate(28.260408, 64.331475) rotate(-45.000000) translate(-28.260408, -64.331475) "></path>
+        </g>
+    </g>
+</svg>

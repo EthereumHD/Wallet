@@ -1,0 +1,82 @@
+.main {
+    .header {
+        padding-top: 24px;
+        padding-bottom: 20px;
+        text-align: center;
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            background: url(../../../assets/imgs/failure.svg) center center repeat;
+            background-size: cover;
+            margin: 0 auto;
+
+            &.success {
+                background-image: url(../../../assets/imgs/success.svg);
+            }
+
+            &.warning {
+                background-image: url(../../../assets/imgs/warning.svg);
+            }
+        }
+
+        .label {
+            margin-top: 18px;
+            line-height: 20px;
+            font-size: 14px;
+            color: var(--title-color);
+        }
+    }
+
+    .split {
+        background: var(--input-background-color);
+        height: 20px;
+        margin: 0 -18px;
+    }
+}
+
+
+.info-list {
+    .info {
+        height: 44px;
+        display: flex;
+        line-height: 44px;
+        .copy {
+            //margin-left: 8px;
+            background: url(../../../assets/imgs/copy.svg) center center no-repeat;
+            width: 40px;
+            height: 100%;
+            background-size: 14px 14px;
+        }
+        .value-copy {
+            color: var(--title-color);
+            font-size: 14px;
+            width: 200px;
+            text-align: right;
+            word-break: break-all;
+        }
+    }
+
+    .key {
+        color: var(--tips-color);
+        font-size: 14px;
+        flex: 1;
+    }
+
+    .value {
+        color: var(--title-color);
+        font-size: 14px;
+        width: 200px;
+        text-align: right;
+        word-break: break-all;
+    }
+
+    .focus .value {
+        color: var(--main-color);
+    }
+
+    .address .value {
+        line-height: 18px;
+        color: var(--main-color);
+    }
+}

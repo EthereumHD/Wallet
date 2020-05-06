@@ -1,0 +1,46 @@
+$pagePadding: 18px;
+
+.header {
+    height: 44px;
+    line-height: 44px;
+    font-size: 17px;
+    color: #030303;
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.10);
+    background: #fff;
+    text-align: center;
+}
+
+.item-list {
+    margin-top: 10px;
+}
+
+.item {
+    .icon {
+        width: 22px;
+        height: 22px;
+        background: url(../../../../assets/imgs/dollar.svg) center center no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+
+        &.icon-language {
+            background-image: url(../../../../assets/imgs/language.svg);
+        }
+
+        &.icon-wallet {
+            background-image: url(../../../../assets/imgs/password.svg);
+        }
+
+        &.icon-password {
+            background-image: url(../../../../assets/imgs/lock.svg);
+        }
+
+        &.icon-browser {
+            background-image: url(../../../../assets/imgs/browser.svg);
+        }
+
+        &.icon-about {
+            background-image: url(../../../../assets/imgs/about.svg);
+        }
+    }
+}

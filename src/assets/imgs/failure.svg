@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>提示icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Ehd钱包" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ehd交易详情-转账失败" transform="translate(-166.000000, -113.000000)">
+            <g id="失败icon" transform="translate(166.000000, 113.000000)">
+                <circle id="椭圆形复制-3" fill="#FF4521" fill-rule="evenodd" cx="22" cy="22" r="22"></circle>
+                <path d="M24,11 L24,33 L20,33 L20,11 L24,11 Z M33,20 L33,24 L11,24 L11,20 L33,20 Z" id="！复制-2" fill="#FFFFFF" fill-rule="nonzero" transform="translate(22.000000, 22.000000) rotate(45.000000) translate(-22.000000, -22.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

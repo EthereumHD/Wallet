@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ action ? ('BACKUP_MNEMONIC' | translate) : ('EXPORT_MNEMONIC' | translate) }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <div class="tips" translate="">BACKUP_MNEMONIC_TIPS</div>
+        <div class="mnemonic-grid clear">
+            <div class="grid" *ngFor="let mnemonic of mnemonicList">
+                {{ mnemonic }}</div>
+        </div>
+    </div>
+
+    <div class="confirm-button bottom-button" tappable (click)="goNext()" [ngClass]="enabled ? '' : 'disabled'"
+        translate="">NEXT
+    </div>
+
+</ion-content>
+
+
+<div class="prompt-mask" *ngIf="ifShowPasswordPrompt">
+    <div class="content">
+        <div class="desc">{{ promptDesc }}</div>
+
+        <div class="input-password-wrapper">
+            <div class="input-wrapper">
+                <input [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="paymentPassword" placeholder="请输入您的安全密码">
+            </div>
+            <div class="eye" tappable (click)="toggleEyeOpen()" [ngClass]="ifEyeOpen ? 'eye-open' : 'eye-close'"></div>
+        </div>
+        <div class="error-text" *ngIf="promptError">{{ promptError }}</div>
+
+        <div class="btns">
+            <div class="btn btn-close" tappable (click)="cancelPrompt()" translate="">CANCEL</div>
+            <div class="btn btn-confirm" (click)="confirmPrompt()" translate="">CONFIRM</div>
+        </div>
+    </div>
+</div>
+
+<div class="lds-css ng-scope" *ngIf="ifShowLoading">
+    <div class="lds-wrapper">
+        <div class="lds-flickr">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <div class="progress">{{ rate }}%</div> -->
+    </div>
+</div>

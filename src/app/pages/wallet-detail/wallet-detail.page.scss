@@ -1,0 +1,188 @@
+ion-content {
+    --background: var(--input-background-color);
+}
+
+ion-toolbar {
+    --background: var(--main-color);
+    --color: #fff;
+}
+
+ion-back-button {
+    --color: #fff;
+}
+
+.header {
+    background: var(--ion-color-primary);
+    border-radius: 0px 0px 15px 15px;
+    height: 180px;
+    // padding-top: 44px;
+    color: #fff;
+
+    .title {
+        display: flex;
+        height: var(--header-height);
+
+        ion-back-button {
+            height: var(--header-height);
+            width: var(--header-height);
+            background: url(../../../assets/imgs/back.svg) center center no-repeat;
+            background-size: 15px 15px;
+        }
+
+        .text {
+            flex: 1;
+            font-size: 17px;
+            line-height: var(--header-height);
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    .info {
+        padding-top: 30px;
+        text-align: center;
+        color: #fff;
+
+        .amount {
+            font-size: 34px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
+        .money {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 6px;
+        }
+    }
+}
+
+.btns {
+    background: #FFFFFF;
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.00) 11%, rgba(255, 255, 255, 0.84) 83%);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.06), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    height: 64px;
+    margin: 0 var(--page-padding);
+    display: flex;
+    margin-top: -32px;
+    padding: 8px 0;
+
+    .money {
+        flex: 1;
+        display: flex;
+        font-size: 16px;
+        color: #000000;
+        line-height: 64px;
+        justify-content: center;
+        align-items: center;
+
+        &:first-child {
+            border-right: 1px solid #E0E0E0;
+        }
+
+        .icon {
+            background: url(../../../assets/imgs/receive.svg) center center no-repeat;
+            width: 36px;
+            height: 36px;
+            background-size: contain;
+            margin-right: 6px;
+        }
+
+        &.transfer {
+            .icon {
+                background-image: url(../../../assets/imgs/transfer.svg);
+            }
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    background: #FFFFFF;
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.00) 11%, rgba(255, 255, 255, 0.84) 83%);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.06), 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 14px var(--page-padding);
+
+    .tab {
+        font-size: 14px;
+        color: var(--tips-color);
+        text-align: center;
+        height: 48px;
+        flex: 1;
+
+        .label {
+            line-height: 46px;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+        }
+
+        &.focus {
+            .label {
+                color: var(--main-color);
+                border-color: var(--main-color);
+            }
+
+        }
+    }
+}
+
+.no-more {
+    color: var(--tips-color);
+    font-size: 12px;
+    padding: 20px 0;
+    line-height: 18px;
+    text-align: center;
+}
+
+.transactions {
+    background: #FAFAFA;
+    // box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+    margin: 0 var(--page-padding);
+
+    .transaction {
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+        height: 64px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .info {
+            flex: 1;
+
+            .receiver {
+                font-size: 14px;
+                line-height: 16px;
+                color: var(--title-color);
+            }
+
+            .date {
+                margin-top: 8px;
+                font-size: 12px;
+                color: var(--tips-color);
+            }
+        }
+
+        .detail {
+            text-align: right;
+
+            .amount {
+                font-size: 16px;
+                line-height: 20px;
+                color: var(--main-color);
+
+                &.receive {
+                    color: #FF4521;
+                }
+            }
+
+            .status {
+                margin-top: 4px;
+                font-size: 12px;
+                color: var(--tips-color);
+            }
+        }
+    }
+}

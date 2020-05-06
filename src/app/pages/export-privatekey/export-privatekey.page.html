@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'EXPORT_PRIVATEKEY' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <div class="tips" translate>
+            EXPORT_PRIVATEKEY_TIPS
+        </div>
+
+        <div class="textarea">
+            {{ privateKey }}
+        </div>
+    </div>
+
+    <div class="bottom-button">
+        <div class="confirm-button" tappble (click)="copyKeystore()" translate>COPY_PRIVATEKEY</div>
+        <div class="confirm-button outline-button" (click)="exportKeystoreToMiner()" translate>EXPORT_PRIVATEKEY_MINER
+        </div>
+    </div>
+</ion-content>
+
+<app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
+    cancelText="{{ 'CANCEL' | translate }}" confirmText="{{ 'CONFIRM' | translate }}" (cancel)="cancelPrompt()"
+    (confirm)="confirmPrompt($event)"></app-generate-privatekey>

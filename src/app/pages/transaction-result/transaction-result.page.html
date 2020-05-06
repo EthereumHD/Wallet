@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/wallet-detail"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'TRANSACTION_DETAIL' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main">
+        <div class="header">
+            <div class="logo" [ngClass]="{'0': 'success', '1': 'warning', '2': ''}[status]"></div>
+            <p class="label">
+                {{ {'0': ('TRSACTION_SUCCEED' | translate), '1': ('TRSACTION_PACKAGING' | translate), '2': ('TRSACTION_FAILURE' | translate)}[status] }}
+            </p>
+        </div>
+
+        <div class="info-list">
+            <div class="info">
+                <div class="key" translate>TRSACTION_AMOUNT</div>
+                <div class="value">{{ detail.value | coinDisplay }} EHD</div>
+            </div>
+            <div class="info">
+                <div class="key" translate>MINER_FEE</div>
+                <div class="value">{{ miningFee | coinDisplay }} EHD</div>
+            </div>
+            <div class="info address" tappable (click)="goAddress(detail.from)">
+                <div class="key" translate>SEND_ADDRESS</div>
+                <div class="value">{{ detail.from }}</div>
+            </div>
+            <div class="info address" tappable (click)="goAddress(detail.to)">
+                <div class="key" translate>RECEIVER_ADDRESS</div>
+                <div class="value">{{ detail.to }}</div>
+            </div>
+        </div>
+
+        <div class="split"></div>
+
+        <div class="info-list">
+            <div class="info focus" (click)="goHash(detail.hash)">
+                <div class="key" translate>TRANSACTION_HASH</div>
+                <div class="value-copy">{{ detail.hash | addEhdEllipsis }}</div>
+                <!--<div class="copy" tappable (click)="copyAddr()"></div>-->
+            </div>
+
+            <div class="info" [ngClass]="status != 1 ? 'focus' : ''" tappable (click)="goHeight(detail.blockNumber)">
+                <div class="key" translate>BLOCKCHAIN_HEIGHT</div>
+                <div class="value">{{ status !== 1 ? detail.blockNumber : ('TRSACTION_PACKAGING' | translate) }}</div>
+            </div>
+
+            <div class="info">
+                <div class="key" translate>TRANSACTION_TIME</div>
+                <div class="value">{{ time | timeDisplay }}</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

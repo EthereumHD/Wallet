@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/wallet-admin"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ 'CHANGE_WALLET_NAME' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="wallet-modify-content">
+        <div class="input-text-wrapper">
+            <div class="label" translate>WALLET_NAME</div>
+            <div class="input-wrapper">
+                <input type="text" (blur)="checkWalletName()" [(ngModel)]="walletName"
+                    placeholder="{{ 'INPUT_WALLET_NAME' | translate }}">
+            </div>
+        </div>
+
+        <div class="error-text" *ngIf="walletNameError">{{ walletNameError }}</div>
+    </div>
+
+    <div class="confirm-button bottom-button" tappable (click)="doSave()" translate>
+        SAVE
+    </div>
+</ion-content>

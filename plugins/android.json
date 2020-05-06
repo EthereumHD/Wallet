@@ -1,0 +1,74 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-open-native-settings": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-advanced-http": {
+      "OKHTTP_VERSION": "3.10.0",
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-appminimize": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ehd.mobile"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ehd.mobile"
+    }
+  }
+}
